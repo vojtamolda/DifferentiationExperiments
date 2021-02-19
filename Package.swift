@@ -7,6 +7,10 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .executable(
+            name: "Trapz",
+            targets: ["Trapz"]
+        ),
+        .executable(
             name: "Bounce",
             targets: ["Bounce"]
         ),
@@ -27,6 +31,16 @@ let package = Package(
         ),
     ],
     targets: [
+        .target(
+            name: "Trapz",
+            dependencies: [
+                .product(name: "Plotly", package: "Plotly"),
+            ],
+            exclude: [
+                "Example 1.png", "Example 1.html",
+                "Example 2.png", "Example 2.html"
+            ]
+        ),
         .target(
             name: "Bounce",
             dependencies: [
@@ -49,6 +63,6 @@ let package = Package(
         ),
         .target(
             name: "Basics"
-        ),
+        )
     ]
 )

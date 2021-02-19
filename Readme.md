@@ -4,6 +4,15 @@
 This repository contains a more or less random collection of ideas that demonstrate applications of the differentiability built into the Swift programming language. Running the examples requires [trunk development snapshot of the Swift compiler](https://swift.org/download/#snapshots). Release versions of the compiler don't contain the `Differentiation` module.
 
 
+## Derivative of an integral function - [`Trapz`](Sources/Trapz/main.swift)
+
+> The idea is simple, we define a function in Python as usual, and in the function body calculate the integral in a program. Then we use autograd to get the derivative of the function.
+
+Source code and the idea is adapted from this [blog post](http://kitchingroup.cheme.cmu.edu/blog/2018/10/10/Autograd-and-the-derivative-of-an-integral-function/) published by the Kitchin group at CMU.
+
+![Example 2](Sources/Trapz/Example%202.png?raw=true)
+
+
 ## Bounce - Some balls attached to springs - [`Bounce`](Sources/Bounce/main.swift)
 
 > We demonstrate the language using a mass-spring simulator, with three springs and three mass points, as shown right.

@@ -7,6 +7,10 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .executable(
+            name: "RK4",
+            targets: ["RK4"]
+        ),
+        .executable(
             name: "Trapz",
             targets: ["Trapz"]
         ),
@@ -31,6 +35,16 @@ let package = Package(
         ),
     ],
     targets: [
+        .target(
+            name: "RK4",
+            dependencies: [
+                .product(name: "Plotly", package: "Plotly"),
+            ],
+            exclude: [
+                "Figure 1.png", "Figure 1.html",
+                "Figure 2.png", "Figure 2.html"
+            ]
+        ),
         .target(
             name: "Trapz",
             dependencies: [

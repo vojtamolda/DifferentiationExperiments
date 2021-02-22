@@ -4,6 +4,15 @@
 This repository contains a more or less random collection of ideas that demonstrate applications of the differentiability built into the Swift programming language. Running the examples requires [trunk development snapshot of the Swift compiler](https://swift.org/download/#snapshots). Release versions of the compiler don't contain the `Differentiation` module.
 
 
+## Bounce - Some balls attached to springs - [`Bounce`](Sources/Bounce/main.swift)
+
+> We demonstrate the language using a mass-spring simulator, with three springs and three mass points, as shown right.
+
+Inspired by an example used in the [DiffTaichi paper](https://arxiv.org/abs/1910.00935).
+
+![Evolution](Sources/Bounce/Evolution.png?raw=true)
+
+
 ## Introduction to differentiable Swift - [`Opening`](Sources/Opening/main.swift)
 
 > Build from the Foundation up!

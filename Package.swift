@@ -7,6 +7,10 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .executable(
+            name: "Wave",
+            targets: ["Wave"]
+        ),
+        .executable(
             name: "RK4",
             targets: ["RK4"]
         ),
@@ -33,8 +37,25 @@ let package = Package(
             url: "https://github.com/vojtamolda/Plotly.swift",
             from: "0.5.0"
         ),
+        .package(
+            name: "Swim",
+            url: "https://github.com/t-ae/Swim",
+            from: "3.9.0"
+        )
     ],
     targets: [
+        .target(
+            name: "Wave",
+            dependencies: [
+                .product(name: "Plotly", package: "Plotly"),
+                .product(name: "Swim", package: "Swim"),
+            ],
+            exclude: [
+                "Target.png",
+                "Splash.gif",
+                "Optimization.gif"
+            ]
+        ),
         .target(
             name: "RK4",
             dependencies: [

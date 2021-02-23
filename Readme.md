@@ -24,6 +24,17 @@ Source code and the idea is adapted from this [blog post](http://kitchingroup.ch
 ![Example 2](Sources/Trapz/Example%202.png?raw=true)
 
 
+## Wave - Shallow water PDE solver - [`Wave`](Sources/Wave/main.swift)
+
+**Currently (Nov 2020) extremely slow. See [https://bugs.swift.org/browse/SR-14113](https://bugs.swift.org/browse/SR-14113) for more details.**
+
+> Back-propagate backward through time and optimize the initial water surface height in order to achieve a particular target pattern at the end of the simulation.
+
+Inspired by the `wave.py` example used in the [DiffTaichi paper](https://arxiv.org/abs/1910.00935).
+
+![Splash](Sources/Wave/Splash.gif?raw=true)
+
+
 ## Bounce - Some balls attached to springs - [`Bounce`](Sources/Bounce/main.swift)
 
 > We demonstrate the language using a mass-spring simulator, with three springs and three mass points, as shown right.

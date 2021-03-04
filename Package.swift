@@ -49,6 +49,15 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Animals",
+            dependencies: [
+                .product(name: "Plotly", package: "Plotly")
+            ],
+            exclude: [
+                "Animal.png",
+            ]
+        ),
+        .target(
             name: "Billiard",
             exclude: [
                 "Example.svg"

@@ -3,6 +3,18 @@
 
 This repository contains a more or less random collection of ideas that demonstrate applications of the differentiability built into the Swift programming language. Running the examples requires [trunk development snapshot of the Swift compiler](https://swift.org/download/#snapshots). Release versions of the compiler don't contain the `Differentiation` module.
 
+
+## Critters learn to walk - [`Animals`](Sources/Animals/main.swift)
+
+**Currently (Nov 2020) extremely slow. See [https://bugs.swift.org/browse/SR-14113](https://bugs.swift.org/browse/SR-14113) for more details.**
+
+> Back-propagate backward through time and optimize the distance the animal achieved at the end of the simulation.
+
+Inspired by the `mass_spring.py` example used in the [DiffTaichi paper](https://arxiv.org/abs/1910.00935).
+
+![Animal](Sources/Animals/Animal.png?raw=true)
+
+
 ## Long stick and some balls - [`Billiard`](Sources/Billiard/main.swift)
 
 **Currently (Feb 2021) impossible to complete due to a bug that crashes the Swift compiler when inline closures are used. See [https://bugs.swift.org/browse/SR-12992](https://bugs.swift.org/browse/SR-12992) for more details.**

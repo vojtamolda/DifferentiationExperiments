@@ -3,6 +3,16 @@
 
 This repository contains a more or less random collection of ideas that demonstrate applications of the differentiability built into the Swift programming language. Running the examples requires [trunk development snapshot of the Swift compiler](https://swift.org/download/#snapshots). Release versions of the compiler don't contain the `Differentiation` module.
 
+## Long stick and some balls - [`Billiard`](Sources/Billiard/main.swift)
+
+**Currently (Feb 2021) impossible to complete due to a bug that crashes the Swift compiler when inline closures are used. See [https://bugs.swift.org/browse/SR-12992](https://bugs.swift.org/browse/SR-12992) for more details.**
+
+> Oh no! The balls aren’t reaching the targets.
+
+Source code and the idea is adapted from [Differentiable Swift](http://bit.ly/swift-autodiff-intro) presentation and [notebook](http://bit.ly/swift-physics-demo).
+
+![Example](Sources/Billiard/Example.svg?raw=true)
+
 
 ## A differentiable ODE integrator for sensitivity analysis - [`RK4`](Sources/RK4/main.swift)
 

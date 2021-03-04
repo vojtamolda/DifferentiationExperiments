@@ -7,6 +7,10 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: [
         .executable(
+            name: "Billiard",
+            targets: ["Billiard"]
+        ),
+        .executable(
             name: "Wave",
             targets: ["Wave"]
         ),
@@ -44,6 +48,12 @@ let package = Package(
         )
     ],
     targets: [
+        .target(
+            name: "Billiard",
+            exclude: [
+                "Example.svg"
+            ]
+        ),
         .target(
             name: "Wave",
             dependencies: [
